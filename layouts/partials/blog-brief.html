@@ -18,6 +18,16 @@
             </div>
             {{ end }}
 
+            
+            {{ if .Params.Author }}
+            <div class="level-item">
+                <a href="{{ .RelPermalink }}">
+                    <p class="subtitle info">
+                        {{- .Params.Author }}
+                    </p>
+                </a>
+            </div>
+            {{ end }}
 
             <div class="level-item">
                 <a href="{{ .RelPermalink }}">
