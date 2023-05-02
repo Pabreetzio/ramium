@@ -35,9 +35,12 @@
     </div>
 
     <div class="blog-text">
-        {{ with .Params.image }}
+        {{ if .Params.image }}
         <figure>
-            <img src="{{ . | relURL }}">
+            <img src="{{ .Params.image | relURL }}">
+            {{ if .Params.caption }}
+            <figcaption>{{ .Params.caption}}</figcaption>
+            {{ end }}
         </figure>
         {{ end }}
 
